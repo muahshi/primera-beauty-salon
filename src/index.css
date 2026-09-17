@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Montserrat:wght@200;300;400;600&display=swap');
+
+@layer utilities {
+  .font-luxury { font-family: 'Cinzel', serif; }
+  .font-modern { font-family: 'Montserrat', sans-serif; }
+  
+  .bg-parallax {
+    background-image: url('https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=2071&auto=format&fit=crop');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .super-glass {
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+}
+
+.animate-gradient {
+  background-size: 200% auto;
+  animation: textShine 4s linear infinite;
+}
+@keyframes textShine { to { background-position: 200% center; } }
+
+.float-anim { animation: float 6s ease-in-out infinite; }
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #d946ef; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #c026d3; }
